@@ -88,7 +88,7 @@ footer {
 .products li {
   flex: 1 1 29rem;
   height: 47rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   margin: 1rem;
 }
 
@@ -132,4 +132,18 @@ footer {
 
 .button.primary {
   background-color: #ffc040;
+}
+
+
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+
+.filter div {
+  flex: 1;
 }
