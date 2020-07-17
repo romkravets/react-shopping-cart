@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './data.json';
+/*import data from './data.json';*/
 import Products from './components/Products';
 import Filter from './components/Filter';
 import Cart from './components/Cart';
@@ -10,10 +10,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      products: data.products,
+    /*  products: data.products,*/
       cartItems: localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')): [],
-      size: "",
-      sort: ""
+    /*  size: "",
+      sort: ""*/
     }
   }
 
@@ -46,7 +46,7 @@ class App extends React.Component {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }
 
-  sortProducts = (event) => {
+/*  sortProducts = (event) => {
     console.log(event.target.value);
     const sort = event.target.value;
     this.setState((state) => ({
@@ -59,9 +59,9 @@ class App extends React.Component {
     }))
 
 
-  }
+  }*/
 
-  filterProducts = (event) => {
+ /* filterProducts = (event) => {
     console.log(event.target.value);
     if(event.target.value === "") {
       this.setState({
@@ -75,7 +75,7 @@ class App extends React.Component {
       })
     }
   }
-
+*/
 
   render() {
     return (
@@ -86,15 +86,15 @@ class App extends React.Component {
               <div className="content">
               <div className="main">
                 <Filter
-                  count={this.state.products.length}
+                 /* count={this.state.products.length}
                   size={this.state.size}
                   sort={this.state.sort}
                   filterProducts={this.filterProducts}
-                  sortProducts={this.sortProducts}
+                  sortProducts={this.sortProducts}*/
                 />
                 <Products
-                  products={this.state.products}
-                  addToCart={this.addToCart}/>
+                  /*roducts={this.state.products}
+                  addToCart={this.addToCart}*//>
               </div>
               <div className="sidebar">
                 <Cart
